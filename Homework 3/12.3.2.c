@@ -6,7 +6,7 @@ struct date{
     int day;
 };
 
-int days(struct date*,int*);
+void days(struct date*,int*);
 
 int main(){
 
@@ -24,7 +24,7 @@ int main(){
     return 0;   
 }
 
-int days(struct date *days,int *res){
+void days(struct date *days,int *res){
     //change value by its address that reduce from what i saved in structure days
     *res = (days->day-1)+(days->month-1)*30+(days->year-2000)*360;
 }
